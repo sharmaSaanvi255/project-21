@@ -24,7 +24,7 @@ function draw() {
   if (hasCollided(bullet,wall)) {
    bullet.velocityX=0;
    
-   var damage=0.5*bulletWeight*bulletSpeed*bulletSpeed/(thickness of wall/thickness of wall/thickness of wall);
+   var damage=0.5*weight*speed*speed/(thickness*thickness*thickness);
 
    if (damage>10)  {
      wall.shapeColor="green";
@@ -37,7 +37,7 @@ function draw() {
 }
   
  function hasCollided(bullet,wall) {
-   bulletRightEdge=bullet.x +bullet.width;
+   bulletRightEdge=bullet.x +bullet.width/2;
    wallLeftEdge=wall.x;
 
    if (bulletRightEdge>=wallLeftEdge) {
